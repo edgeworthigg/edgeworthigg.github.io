@@ -7,6 +7,21 @@
         padding: 25px;
         border-color: red;
         margin: 25px;
+        border-radius: 15px;
+
+        box-shadow: 0 0 0 5px #0F0,
+                    inset 0 0 0 5px #00F;
+        text-shadow: 1px 1px 1px #000;
+        color: #FFF;
+
+        box-sizing: border-box;
+        width: 100%;
+        background: linear-gradient(to bottom, red, yellow);
+      }
+      h2 {
+        border-radius: 29px;
+        background: radial-gradient(circle, blue, green);
+        text-shadow: 2px 2px 2px #FFF;
       }
       body {
         margin: 50px;
