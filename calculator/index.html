@@ -4,17 +4,18 @@
   </head>
   <body>
     <script type="text/javascript">
-      var updateCounter = 0;
       function updateResults() {
-        updateCounter++;
-        results = document.getElementById("results");
-        results.innerHTML = "<pre>whatever " + updateCounter + "</pre>" + 
-          results.innerHTML;
+        var results = document.getElementById("results");
+        var toCalculate = document.getElementById("toCalculate").value;
+        // TODO: This is a terrible security exposure, find a better way
+        var result = eval(toCalculate);
+        results.innerHTML = "<pre>" + toCalculate + " = " + 
+          result + "</pre>" + results.innerHTML;
       }
     </script>
-    <form>
-      <input type="text" name="toCalculate"><br>
-      <input type="button" name="updateresults" value="Press me!" onClick="updateResults()">
+    <form id="input">
+      <input type="text" id="toCalculate"><br>
+      <input type="button" id="updateresults" value="Press me!" onClick="updateResults()">
     </form>
     <div id="results"></div>
   </body>
