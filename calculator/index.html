@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>CAL-CU-LA-TOR</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var updateCounter = 0;
+      function updateResults() {
+        updateCounter++;
+        results = document.getElementById("results");
+        results.innerHTML = "<pre>whatever " + updateCounter + "</pre>" + 
+          results.innerHTML;
+      }
+    </script>
+    <form>
+      <input type="text" name="toCalculate"><br>
+      <input type="button" name="updateresults" value="Press me!" onClick="updateResults()">
+    </form>
+    <div id="results"></div>
+  </body>
+</html>
