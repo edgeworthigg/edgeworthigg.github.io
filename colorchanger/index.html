@@ -1,11 +1,19 @@
 <html>
   <body>
     <script>
-      function changeColor() {
-        document.bgColor = "red";
+      var currentColor = document.bgColor;
+      var previousColor = "";
+      function swapColors() {
+        if(document.bgColor == "red")
+          document.bgColor = previousColor;
+        else
+          document.bgColor = "red";
       }
     </script>
-    <a href="#" onClick="changeColor()">Click me!</a>
+    <p>
+      <a href="#" onClick="swapColors()">Click here</a> to swap between red and
+      original background color.
+    </p>
   </body>
 </html>
 
